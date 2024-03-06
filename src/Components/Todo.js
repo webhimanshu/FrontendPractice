@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useToDoContext } from '../Context/ToDoAppProvider'
 const Todo = () => {
   const { inputValue, setInputValue, list , insert, remove , update, edit} = useToDoContext();
+  const [state , setState] = useState(0);
+
   return (
     <div className='container'>
       <div className='input-container'>
